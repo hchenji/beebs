@@ -1,3 +1,5 @@
+use `./configure --host=or1k-elf --with-chip=optimsoc --with-board=optimsoc`
+
 # BEEBS: Open Benchmarks for Energy Measurements on Embedded Platforms
 
 This repository contains the Bristol/Embecosm Embedded Benchmark Suite
