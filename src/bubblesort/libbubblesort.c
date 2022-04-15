@@ -83,7 +83,6 @@ void BubbleSort(int Array[])
 
    for (i = 0; i < NUMELEMS; i++)
    {
-      printf("in iter %d\n", i);
       Sorted = TRUE;
       for (Index = 0; Index < NUMELEMS; Index ++) {
          if (Index >= NUMELEMS-i)

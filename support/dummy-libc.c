@@ -207,11 +207,12 @@ sprintf (char *str __attribute__ ((unused)),
   return 0;
 }
 
-int
-putchar (int c __attribute__ ((unused)))
-{
-  return 0;
-}
+// already defined in optimsoc newlib as a macro, conflicts with this def as a function
+// int
+// putchar (int c __attribute__ ((unused)))
+// {
+//   return 0;
+// }
 
 
 int
@@ -293,11 +294,11 @@ fgetc (FILE *stream __attribute__ ((unused)))
   return 0;
 }
 
-int
-getc (FILE *stream __attribute__ ((unused)))
-{
-  return 0;
-}
+// int
+// getc (FILE *stream __attribute__ ((unused)))
+// {
+//   return 0;
+// }
 
 int
 ungetc (int c, FILE *stream __attribute__ ((unused)))
@@ -312,12 +313,12 @@ fputc (int ch __attribute__ ((unused)),
   return 0;
 }
 
-int
-putc (int ch __attribute__ ((unused)),
-      FILE *stream __attribute__ ((unused)))
-{
-  return 0;
-}
+// int
+// putc (int ch __attribute__ ((unused)),
+//       FILE *stream __attribute__ ((unused)))
+// {
+//   return 0;
+// }
 
 char *
 fgets (char *s __attribute__ ((unused)),
