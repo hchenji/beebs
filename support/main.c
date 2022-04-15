@@ -46,6 +46,15 @@ main (int   argc __attribute__ ((unused)),
       printf("repeat factor %i\n", i);
       initialise_benchmark ();
       result = benchmark ();
+
+      correct = verify_benchmark (result);
+      if (correct == 1)
+        printf("OUTPUT IS correct!\n");
+      else if (correct == -1)
+        printf("not possible to check output for this benchmark\n");
+      else
+        printf("~o~o         INCORRECT!!!!! ALARM ALARM!      ~o~o~o~o~o~o~o~o\n");
+        
     }
 
   stop_trigger ();
