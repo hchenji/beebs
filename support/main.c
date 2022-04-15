@@ -24,7 +24,7 @@
    SPDX-License-Identifier: GPL-3.0-or-later */
 
 #include "support.h"
-
+#include <stdio.h>
 
 extern int initialise_benchmark (void);
 extern int verify_benchmark (int unused);
@@ -43,6 +43,7 @@ main (int   argc __attribute__ ((unused)),
 
   for (i = 0; i < REPEAT_FACTOR; i++)
     {
+      printf("repeat factor %i\n", i);
       initialise_benchmark ();
       result = benchmark ();
     }

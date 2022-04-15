@@ -86,9 +86,13 @@ SUBDIRS="aha-compress          \
           whetstone             \
           wikisort"
 
-for d in `find src/ -type d -maxdepth 1` ; do
+rm -rf vmems
+mkdir -p vmems
+
+for d in `find src/ -maxdepth 1 -type d` ; do
     echo $d
     benchname=$(basename $d)
-    or1k-elf-objdump -D src/$benchname/$benchname > $benchname.elf
-    bin2vmem $benchname.elf > $benchname.vmem
+    or1k-elf-objdump -D src/$benchname/$benchname > vmems/$benchname.dis
+    or1k-elf-objcopy -O binary src/$benchname/$benchname vmems/$benchname.bin
+    bin2vmem vmems/$benchname.bin > vmems/$benchname.vmem
 done

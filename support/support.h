@@ -34,7 +34,7 @@
    define a default */
 
 #ifndef BOARD_REPEAT_FACTOR
-#define BOARD_REPEAT_FACTOR 4096
+#define BOARD_REPEAT_FACTOR 8
 #endif
 
 /* Include chip support header if we have one */
